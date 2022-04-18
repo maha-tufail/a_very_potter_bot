@@ -1,0 +1,91 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: sort me to a house 1
+  steps:
+  - intent: greet 
+  - action: utter_greet 
+  - intent: sort 
+  - action: action_sort_user 
+  - action: utter_did_that_help 
+  - or:
+    - intent: affirm
+    - intent: thanks 
+  - action: utter_happy
+
+# - story: sort me to a house 2
+#   steps:
+#   - intent: sort 
+#   - action: action_sort_user
+#   - intent: why
+#   - action: action_utter_qualities 
+#   - action: utter_did_that_help 
+#   - intent: deny 
+#   - action: utter_goodbye 
+
+# - story: who is this person
+#   steps:
+#   - intent: confirm_exists 
+#   - action: action_confirm_exists 
+#   - intent: who_is 
+#   - action: action_introduce_person
+#   - action: utter_did_that_help 
+#   - checkpoint: who_is_person_checkpoint 
+
+# - story: who is this person 1
+#   steps:
+#   - intent: confirm_exists 
+#   - action: action_confirm_exists 
+#   - intent: who_is 
+#   - action: action_introduce_person
+#   - action: utter_did_that_help 
+#   - or:
+#     - intent: affirm 
+#     - intent: thanks
+
+#   - action: utter_happy 
+
+# - story: who is this person 2
+#   steps:
+#   - intent: confirm_exists 
+#   - action: action_confirm_exists 
+#   - intent: who_is 
+#   - action: action_introduce_person
+#   - action: utter_did_that_help 
+#   - intent: deny 
+#   - action: utter_sad  
+
+# - story: cast a spell 
+#   steps:
+#   - intent: cast_spell
+#   - action: action_cast_spell 
+
+

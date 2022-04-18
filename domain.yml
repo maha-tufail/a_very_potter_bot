@@ -1,0 +1,57 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - confirm_exists 
+  - who_is
+  - cast_spell
+  - which_potion
+  - which_igredients
+  - which_color 
+  - which_house 
+  - yes_no
+  - houses 
+  - sort 
+  - why 
+  - thanks 
+
+entities:
+  - character_type
+  - potion_type
+  - attribute_type 
+  - house_type
+
+actions:
+  - action_sort_user
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "yer a wizard harry"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

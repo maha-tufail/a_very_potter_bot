@@ -1,0 +1,211 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon 
+    - heya
+    - yer a wizard 
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya 
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: sort 
+  examples: |
+    - which house do you think i belong to
+    - sort me 
+    - sort me into a house 
+    - sort me into a hogwarts house 
+    - do you think I could be a [slytherin](house_type) 
+
+- intent: confirm_exists  
+  examples: |
+    - is [harry](character_type) a harry potter character ?
+    - is [harmoine granger](character_type) a wizard ?
+    - is [ron weasley](character_type) a muggle ?
+
+- intent: who_is 
+  examples: | 
+    - who is [harry potter](character_type) ?
+    - who is [harmoine granger](character_type) ?
+    - who is [ronald weasley](character_type) ?
+    - who is [lord voldemort](character_type) ?
+    - who is [molly weasley](character_type) ?
+    - who is [sirius black](character_type) ?
+    - who is [remus lupin](character_type) ?
+    - who is [lily potter](character_type) ?
+    - who is [james potter](character_type) ?
+    - who is [peter pettigrew](character_type) ?
+    - who is [neville longbottom](character_type) ?
+    - who is [alice longbottom](character_type) ?
+    - who is [frank longbottom](character_type) ?
+    - who is [luna lovegood](character_type) ?
+    - who is [genny weasley](character_type) ?
+
+- intent: cast_spell 
+  examples: | 
+    - cast a spell 
+    - can you a cast a spell ?
+    
+- intent: which_potion 
+  examples: | 
+    - what does [amortentia](potion_type) do ?
+    - what is [veritaserum](potion_type) ?
+    - do you know [draught of living death](potion_type) ?
+
+- intent: which_ingredients 
+  examples: | 
+    - do you know how [ageing potion](potion_type) is made ?
+    - how is [amortentia](potion_type) made ?
+
+- intent: which_color 
+  examples: |
+    - what color is [veritaserum](potion_type) ?
+    - how does [rat tonic](potion_type) look ?
+
+- intent: which_house 
+  examples: | 
+    - [malfoy](character_type) is from which house ?
+    - which house does [neville](character_type) belong to ?
+
+- intent: yes_no 
+  examples: |
+    - is [harry](character_type) a [half blood](attribute_type) ?
+
+- synonym: harry 
+  examples: | 
+    - harry potter 
+    - the boy who lived 
+    - potter 
+    - the chosen one 
+
+- synonym: harmoine
+  examples: | 
+    - harmoine granger 
+    - ms. granger 
+    - granger 
+
+- synonym: ron 
+  examples: |
+    - ronald weasley 
+    - ron weasley 
+    - mr weasley 
+    - weasley 
+
+- synonym: lord voldermort 
+  examples: | 
+    - voldermort 
+    - tom 
+    - riddle 
+    - tom riddle 
+    - the dark lord 
+    - tom marvalo riddle 
+
+- lookup: houses 
+  examples: | 
+    - gryffindor 
+    - slytherin 
+    - hufflepuff 
+    - ravenclaw 
+
+- intent: houses 
+  examples: |
+    - how many hogwarts houses are there ?
+    - what are the hogwarts houses ?
+
+- intent: why
+  examples: |
+    - why do you think so ?
+    - why do you think I am a [gryffindor](house_type)
+    - what's the reason behind that ?
+
+- intent: thanks
+  examples: |
+    - thank you 
+    - thanks 
+    - thank
+
+
