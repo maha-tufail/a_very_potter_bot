@@ -17,7 +17,25 @@ nlu:
     - goodevening
     - good afternoon 
     - heya
-    - yer a wizard 
+    - I solemnly swear that I am up to no good
+
+- intent: tell_name
+  examples: |
+    - My name is [Maha](user_name)
+    - I am [Leen](user_name)
+    - I am [Umar](user_name)
+    - My name is [Arslan](user_name)
+    - My name is [Mariette](user_name)
+    - My name is [Asma](user_name)
+    - I am [Maha](user_name)
+    - I am [Hamza](user_name)
+    - I am [Sultan](user_name)
+    - [Maha](user_name)
+    - [Sultan](user_name)
+    - [Leen](user_name)
+    - [Arslan](user_name)
+    - [Asma](user_name)
+    - [Umar](user_name)
 
 - intent: goodbye
   examples: |
@@ -129,6 +147,10 @@ nlu:
   examples: | 
     - cast a spell 
     - can you a cast a spell ?
+    - please cast a spell ?
+    - please can you cast a spell ?
+    - spell ?
+    - spell 
     
 - intent: which_potion 
   examples: | 

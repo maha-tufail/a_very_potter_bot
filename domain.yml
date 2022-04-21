@@ -20,20 +20,25 @@ intents:
   - sort 
   - why 
   - thanks 
+  - tell_name
 
 entities:
   - character_type
   - potion_type
   - attribute_type 
   - house_type
+  - user_name
 
 actions:
   - action_sort_user
+  - action_greet_name
+  - action_cast_spell
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "yer a wizard harry"
+  - text: "Hi! I am Padfoot. Your friendly neighbourhood wizard."
+  - text: "Greetings! My name is Padfoot. I roam the halls of Hogwarts"
+  - text: "Hello! My name is Padfoot. Watch out for Peeves!"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -51,7 +56,23 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_ask_name:
+  - text: "What's your name?"
+  - text: "What do they call you?"
 
+
+slots: 
+  name_slot:
+    type: text 
+    influence_conversation: true
+    mappings:
+    - type: from_entity 
+      entity: user_name
+
+forms:
+  user_name_form:
+    required_slots:
+      - name_slot
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

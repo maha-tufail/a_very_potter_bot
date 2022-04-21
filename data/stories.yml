@@ -2,12 +2,37 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+# - story: greet 
+#   steps:
+#   - intent: greet 
+#   - action: utter_greet
+#   - action: utter_ask_name 
+#   - intent: tell_name 
+#   - action: user_name_form
+#   - active_loop: name
+#   # set the slot here somehow and trigger the custom action
+#   - slot_was_set:
+#     - requested_slot: name_slot
+#   - action: greet_name # define the custom action 
+#   - action: user_name_form
+#   - active_loop: null 
+
+  # - checkpoint: potter_greeting 
+
+# - story: greet 
+#   steps:
+#   - intent: greet 
+#   - action: utter_greet 
+#   - action: utter_ask_name
+#   - intent: tell_name 
+#   - action: action_greet_name 
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
 
 - story: sad path 1
   steps:
@@ -41,15 +66,22 @@ stories:
     - intent: thanks 
   - action: utter_happy
 
-# - story: sort me to a house 2
-#   steps:
-#   - intent: sort 
-#   - action: action_sort_user
-#   - intent: why
-#   - action: action_utter_qualities 
-#   - action: utter_did_that_help 
-#   - intent: deny 
-#   - action: utter_goodbye 
+- story: sort me to a house 2
+  steps:
+  - intent: greet 
+  - action: utter_greet 
+  - intent: sort 
+  - action: action_sort_user 
+  - action: utter_did_that_help 
+  - intent: deny
+  - action: utter_goodbye
+
+- story: cast a random spell
+  steps:
+  - intent: cast_spell 
+  - action: action_cast_spell
+
+
 
 # - story: who is this person
 #   steps:
@@ -82,10 +114,5 @@ stories:
 #   - action: utter_did_that_help 
 #   - intent: deny 
 #   - action: utter_sad  
-
-# - story: cast a spell 
-#   steps:
-#   - intent: cast_spell
-#   - action: action_cast_spell 
 
 
