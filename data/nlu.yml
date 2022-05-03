@@ -25,7 +25,6 @@ nlu:
     - I am [Leen](user_name)
     - I am [Umar](user_name)
     - My name is [Arslan](user_name)
-    - My name is [Mariette](user_name)
     - My name is [Asma](user_name)
     - I am [Maha](user_name)
     - I am [Hamza](user_name)
@@ -50,6 +49,7 @@ nlu:
     - bye bye
     - see you later
     - see ya 
+    - mischeif managed
 
 - intent: affirm
   examples: |
@@ -122,15 +122,19 @@ nlu:
 - intent: confirm_exists  
   examples: |
     - is [harry](character_type) a harry potter character ?
-    - is [harmoine granger](character_type) a wizard ?
-    - is [ron weasley](character_type) a muggle ?
+    - is [hermione granger](character_type) a wizard ?
+    - is [ron weasley](character_type) a harry potter character ?
+    - is [molly weasley](character_type) a harry potter character ?
+    - is [sirius black](character_type) a harry potter character ?
+    - is [lily potter](character_type) a harry potter character ?
+    - is [james potter](character_type) a harry potter character ?
+    - is [neville longbottom](character_type) a harry potter character ?
+    - is [hermione granger](character_type) a harry potter character ?
 
 - intent: who_is 
   examples: | 
-    - who is [harry potter](character_type) ?
-    - who is [harmoine granger](character_type) ?
+    - who is [hermione granger](character_type) ?
     - who is [ronald weasley](character_type) ?
-    - who is [lord voldemort](character_type) ?
     - who is [molly weasley](character_type) ?
     - who is [sirius black](character_type) ?
     - who is [remus lupin](character_type) ?
@@ -157,47 +161,51 @@ nlu:
     - what does [amortentia](potion_type) do ?
     - what is [veritaserum](potion_type) ?
     - do you know [draught of living death](potion_type) ?
+    - tell me about [amortentia]
+    - tell me about [veritaserum]
+    - what is [amortentia]
+    - what is [veritaserum]
 
 - intent: which_ingredients 
   examples: | 
     - do you know how [ageing potion](potion_type) is made ?
     - how is [amortentia](potion_type) made ?
+    - how to make [veritaserum](potion_type) ?
 
 - intent: which_color 
   examples: |
     - what color is [veritaserum](potion_type) ?
-    - how does [rat tonic](potion_type) look ?
+    - how does [rat tonic](potion_type) look like ?
+    - what color is [ageing potion](potion_type) ?
+    - what color is [amortentia](potion_type) ?
 
-- intent: which_house 
+# - intent: which_house 
+#   examples: | 
+#     - [malfoy](character_type) is from which house ?
+#     - which house does [neville](character_type) belong to ?
+
+- synonym: harry potter
   examples: | 
-    - [malfoy](character_type) is from which house ?
-    - which house does [neville](character_type) belong to ?
-
-- intent: yes_no 
-  examples: |
-    - is [harry](character_type) a [half blood](attribute_type) ?
-
-- synonym: harry 
-  examples: | 
-    - harry potter 
+    - harry  
     - the boy who lived 
     - potter 
     - the chosen one 
 
-- synonym: harmoine
+- synonym: hermione granger
   examples: | 
-    - harmoine granger 
+    - hermione 
     - ms. granger 
     - granger 
 
-- synonym: ron 
+- synonym: ronald weasley
   examples: |
-    - ronald weasley 
+    - ronald  
+    - ron
     - ron weasley 
     - mr weasley 
     - weasley 
 
-- synonym: lord voldermort 
+- synonym: tom riddle
   examples: | 
     - voldermort 
     - tom 
@@ -205,6 +213,7 @@ nlu:
     - tom riddle 
     - the dark lord 
     - tom marvalo riddle 
+    - lord voldermort
 
 - lookup: houses 
   examples: | 
@@ -218,16 +227,31 @@ nlu:
     - how many hogwarts houses are there ?
     - what are the hogwarts houses ?
 
-- intent: why
-  examples: |
-    - why do you think so ?
-    - why do you think I am a [gryffindor](house_type)
-    - what's the reason behind that ?
-
 - intent: thanks
   examples: |
     - thank you 
     - thanks 
     - thank
 
+- intent: who_is_harry
+  examples: |
+    - who is [harry potter](character_type) ?
+    - who is [harry](character_type) ?
+    - who is [the boy who lived](character_type) ?
+    - who is [the chosen one](character_type) ?
+
+- intent: who_is_voldy
+  examples: |
+    - who is [lord voldermort](character_type) ?
+    - who is [voldermort](character_type) ?
+    - who is [the dark lord](character_type) ?
+    - who is [tom riddle](character_type) ?
+    - who is [tom](character_type) ?
+
+- intent: demand_joke 
+  examples: | 
+    - tell me a joke
+    - tell a joke 
+    - joke 
+    - give me a joke 
 

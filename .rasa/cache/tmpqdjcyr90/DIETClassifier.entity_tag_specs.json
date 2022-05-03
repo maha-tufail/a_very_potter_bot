@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-attribute_type",
+      "2": "I-attribute_type",
+      "3": "L-attribute_type",
+      "4": "U-attribute_type",
+      "5": "B-character_type",
+      "6": "I-character_type",
+      "7": "L-character_type",
+      "8": "U-character_type",
+      "9": "B-house_type",
+      "10": "I-house_type",
+      "11": "L-house_type",
+      "12": "U-house_type",
+      "13": "B-potion_type",
+      "14": "I-potion_type",
+      "15": "L-potion_type",
+      "16": "U-potion_type",
+      "17": "B-user_name",
+      "18": "I-user_name",
+      "19": "L-user_name",
+      "20": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-attribute_type": 1,
+      "I-attribute_type": 2,
+      "L-attribute_type": 3,
+      "U-attribute_type": 4,
+      "B-character_type": 5,
+      "I-character_type": 6,
+      "L-character_type": 7,
+      "U-character_type": 8,
+      "B-house_type": 9,
+      "I-house_type": 10,
+      "L-house_type": 11,
+      "U-house_type": 12,
+      "B-potion_type": 13,
+      "I-potion_type": 14,
+      "L-potion_type": 15,
+      "U-potion_type": 16,
+      "B-user_name": 17,
+      "I-user_name": 18,
+      "L-user_name": 19,
+      "U-user_name": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

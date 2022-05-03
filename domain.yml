@@ -12,7 +12,7 @@ intents:
   - who_is
   - cast_spell
   - which_potion
-  - which_igredients
+  - which_ingredients
   - which_color 
   - which_house 
   - yes_no
@@ -21,6 +21,18 @@ intents:
   - why 
   - thanks 
   - tell_name
+  - who_is_voldy
+  - who_is_harry
+  - demand_joke
+  - nlu_fallback 
+  
+slots:
+  potion:
+    type: text 
+    influence_conversation: true 
+    mappings: 
+    - type: from_entity 
+      entity: potion_type 
 
 entities:
   - character_type
@@ -33,6 +45,10 @@ actions:
   - action_sort_user
   - action_greet_name
   - action_cast_spell
+  - action_is_character
+  - action_potion_effect
+  - action_potion_ingredients 
+  - action_potion_color 
 
 responses:
   utter_greet:
@@ -60,19 +76,27 @@ responses:
   - text: "What's your name?"
   - text: "What do they call you?"
 
+  utter_ask_rephrase:
+  - text: "I am sorry. I didn't quite understand that. Please rephrase unless you are a muggle ?"
 
-slots: 
-  name_slot:
-    type: text 
-    influence_conversation: true
-    mappings:
-    - type: from_entity 
-      entity: user_name
+  utter_default:
+  - text: "I am sorry. I can't help you."
 
-forms:
-  user_name_form:
-    required_slots:
-      - name_slot
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_harry:
+  - text: " Harry Potter is a wizard, the only child of James and Lily Potter. 
+            He is famous for having survived an attack by Lord Voldemort when he was a baby. 
+            He is also sometimes known as 'The Boy Who Lived' "
+
+  utter_voldermort:
+  - text: " Lord Voldemort, born Tom Marvolo Riddle, was the son of Merope Gaunt (a descendent of Salazar Slytherin)
+            and Tom Riddle, a handsome, wealthy Muggle from Little Hangleton whom Merope ensnared with a love potion.
+            Over the years Voldemort came to be known as the most evil wizard in the history of the wizarding world. 
+            Voldermort was eventually defeated by Harry Potter, the chosen one. "
+
+  utter_joke:
+  - text: "How does Harry Potter get rid of a rash? With quit-itch"
+  - text: "Why does Voldermort prefer over Twitter over Facebook ? because he has only followers not friends"
+  - text: "What do you call an electrocuted Dark Lord? A Volt-demort."
+  - text: "Why is Mad-Eye Moody such a bad professor? Because he can't control his pupils."
+
+

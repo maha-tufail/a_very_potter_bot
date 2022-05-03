@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-character_type",
+      "2": "I-character_type",
+      "3": "L-character_type",
+      "4": "U-character_type",
+      "5": "B-house_type",
+      "6": "I-house_type",
+      "7": "L-house_type",
+      "8": "U-house_type",
+      "9": "B-potion_type",
+      "10": "I-potion_type",
+      "11": "L-potion_type",
+      "12": "U-potion_type",
+      "13": "B-user_name",
+      "14": "I-user_name",
+      "15": "L-user_name",
+      "16": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-character_type": 1,
+      "I-character_type": 2,
+      "L-character_type": 3,
+      "U-character_type": 4,
+      "B-house_type": 5,
+      "I-house_type": 6,
+      "L-house_type": 7,
+      "U-house_type": 8,
+      "B-potion_type": 9,
+      "I-potion_type": 10,
+      "L-potion_type": 11,
+      "U-potion_type": 12,
+      "B-user_name": 13,
+      "I-user_name": 14,
+      "L-user_name": 15,
+      "U-user_name": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

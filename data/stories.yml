@@ -2,37 +2,21 @@ version: "3.1"
 
 stories:
 
-# - story: greet 
-#   steps:
-#   - intent: greet 
-#   - action: utter_greet
-#   - action: utter_ask_name 
-#   - intent: tell_name 
-#   - action: user_name_form
-#   - active_loop: name
-#   # set the slot here somehow and trigger the custom action
-#   - slot_was_set:
-#     - requested_slot: name_slot
-#   - action: greet_name # define the custom action 
-#   - action: user_name_form
-#   - active_loop: null 
+ 
+- story: greet 
+  steps:
+  - intent: greet 
+  - action: utter_greet 
+  - action: utter_ask_name
+  - intent: tell_name 
+  - action: action_greet_name 
 
-  # - checkpoint: potter_greeting 
-
-# - story: greet 
-#   steps:
-#   - intent: greet 
-#   - action: utter_greet 
-#   - action: utter_ask_name
-#   - intent: tell_name 
-#   - action: action_greet_name 
-
-# - story: happy path
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_great
-#   - action: utter_happy
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
 
 - story: sad path 1
   steps:
@@ -75,44 +59,97 @@ stories:
   - action: utter_did_that_help 
   - intent: deny
   - action: utter_goodbye
+  
 
-- story: cast a random spell
+- story: cast a random spell 1
   steps:
   - intent: cast_spell 
   - action: action_cast_spell
+  - action: utter_did_that_help 
+  - or:
+    - intent: affirm
+    - intent: thanks 
+  - action: utter_happy
+
+- story: cast a random spell 2
+  steps:
+  - intent: cast_spell 
+  - action: action_cast_spell
+  - action: utter_did_that_help 
+  - intent: deny 
+  - action: utter_goodbye
+
+- story: tell who Harry Potter is anytime user asks 1
+  steps: 
+  - intent: who_is_harry
+  - action: utter_harry
+  - action: utter_did_that_help 
+  - or:
+    - intent: affirm
+    - intent: thanks 
+  - action: utter_happy
+
+- story: tell who Harry Potter is anytime user asks 2
+  steps: 
+  - intent: who_is_harry
+  - action: utter_harry
+  - action: utter_did_that_help 
+  - intent: deny
+  - action: utter_goodbye
+
+- story: tell who Voldermort is anytime user asks 1
+  steps:
+  - intent: who_is_voldy  
+  - action: utter_voldermort
+  - action: utter_did_that_help 
+  - or:
+    - intent: affirm
+    - intent: thanks
+  - action: utter_happy
+
+- story: tell who Voldermort is anytime user asks 2
+  steps:
+  - intent: who_is_voldy  
+  - action: utter_voldermort
+  - action: utter_did_that_help 
+  - intent: deny
+  - action: utter_goodbye
 
 
+- story: tell a joke 
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: demand_joke
+  - action: utter_joke
 
-# - story: who is this person
-#   steps:
-#   - intent: confirm_exists 
-#   - action: action_confirm_exists 
-#   - intent: who_is 
-#   - action: action_introduce_person
-#   - action: utter_did_that_help 
-#   - checkpoint: who_is_person_checkpoint 
+- story: is this a Harry Potter character 1
+  steps:
+  - intent: confirm_exists
+  - action: action_is_character
+  - action: utter_did_that_help 
+  - or:
+    - intent: affirm
+    - intent: thanks 
+  - action: utter_happy 
 
-# - story: who is this person 1
-#   steps:
-#   - intent: confirm_exists 
-#   - action: action_confirm_exists 
-#   - intent: who_is 
-#   - action: action_introduce_person
-#   - action: utter_did_that_help 
-#   - or:
-#     - intent: affirm 
-#     - intent: thanks
+- story: is this a Harry Potter character 2
+  steps:
+  - intent: confirm_exists
+  - action: action_is_character
+  - action: utter_did_that_help 
+  - intent: deny
+  - action: utter_goodbye 
 
-#   - action: utter_happy 
+- story: tell me all about this potion 
+  steps:
+  - intent: which_potion
+  - action: action_potion_effect 
+  - intent: which_ingredients 
+  - action: action_potion_ingredients 
+  - intent: which_color
+  - action: action_potion_color
 
-# - story: who is this person 2
-#   steps:
-#   - intent: confirm_exists 
-#   - action: action_confirm_exists 
-#   - intent: who_is 
-#   - action: action_introduce_person
-#   - action: utter_did_that_help 
-#   - intent: deny 
-#   - action: utter_sad  
+
 
 
