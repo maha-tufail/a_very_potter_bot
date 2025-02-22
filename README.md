@@ -11,7 +11,7 @@ Questions about characters:
 ![image](https://user-images.githubusercontent.com/27766525/167152484-d42103a8-eb86-4039-a6e4-c283c729b7e1.png)
 ![image](https://user-images.githubusercontent.com/27766525/167154177-8768d176-2d39-4cfc-9780-4c16545bb468.png)
 
-Jokes: 
+Jokes: <br> 
 ![image](https://user-images.githubusercontent.com/27766525/167152676-10dca883-d742-4391-b99f-5aeadb37abd2.png)
 
 Questions about potions:
